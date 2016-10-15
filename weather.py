@@ -28,6 +28,7 @@ def ave_temp(d):
         average += d[ave]
     av = average / len(weather)
     print("The average weather in Aarhus Denmark today is: " + str(av))
+    average = int(av)
 
 # Your second function will create a new dictionary
 # that uses the global average variable to compare
@@ -38,10 +39,9 @@ def ave_temp(d):
 
 def warmth(x):
     global average
-    av = average / len(weather)
     for temp in x:
         if x[temp] > average:
-            warmest[av] = x[temp]
+            warmest[temp] = x[temp]
     print warmest
 
 
@@ -50,3 +50,4 @@ def warmth(x):
 
 ave_temp(weather)
 warmth(weather)
+
